@@ -1,5 +1,5 @@
-run: build
+run: bin/main
 	./bin/main
 
-build: main.c
+bin/main: main.c
 	mkdir -p ./bin && gcc main.c -o ./bin/main
