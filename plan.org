@@ -1,0 +1,42 @@
+* Quiz Game
+** Layout
+#+begin_src plain
++---------------------+
+| Balance - Rs. 4,000 |
++---------------------+
+| Audience Pole (a)   |
+| 50:50 (f)           |
++---------------------+
+
+Q: This is a question? 
+ (A) Option A
+ (B) Option B
+ (C) Option C
+ (D) Option D
+
+Your Input (l, a/b/c/d):
+Which lifeline would you like to use? (a/f) 
+=> 
+#+end_src
+** Rules
+*** Total 5 Questions
+*** Balance starts from 0
+*** Price for first question is 2000rs, doubles after every question.
+*** Audience pole should sometimes give wrong answer (very very low chance).
+*** 50:50 should choose 2 incorrect answers randomly.
+*** If user input is not valid, ask for input again.
+*** Each lifeline can only be used once.
+*** You can add more features if you want.
+#+begin_src C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  srand(time(0));
+  printf("%d", rand()%10+80);
+  return 0;
+}
+#+end_src
+
+#+RESULTS:
+: 82
